@@ -1,3 +1,4 @@
+import { API_URL } from '@/config'
 import { useRef, MouseEvent, useState } from 'react'
 
 export default function Signup() {
@@ -11,7 +12,7 @@ export default function Signup() {
     const email = emailRef.current?.value
     const password = passwordRef.current?.value
 
-    const res = await fetch('http://localhost:3000/api/signup', {
+    const res = await fetch(API_URL + '/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
