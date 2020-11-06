@@ -1,3 +1,4 @@
+// @ts-ignore
 import React from 'react'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
@@ -8,7 +9,7 @@ import TableRow from '@material-ui/core/TableRow'
 import Paper from '@material-ui/core/Paper'
 import { IVehicle } from '@models/Vehicle'
 
-export default function Vehicles({ list }) {
+export default function Vehicles({ list }: any) {
   return (
     <TableContainer component={Paper}>
       <Table aria-label='simple table'>
@@ -21,7 +22,7 @@ export default function Vehicles({ list }) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {list.map(item => (
+          {list.map((item: any) => (
             <TableRow key={item._id}>
               <TableCell component='th' scope='row'>
                 {item._id}
